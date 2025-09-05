@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pencatatan Buku</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f9ff;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #0066cc, #3399ff);
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #004c99;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #0066cc;
+    }
+    section {
+      padding: 20px;
+      display: none;
+      max-width: 900px;
+      margin: auto;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #0066cc;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    th {
+      background: #e6f2ff;
+    }
+    form {
+      margin-top: 20px;
+      background: #e6f2ff;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+    form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #004c99;
+    }
+    img.illustrasi {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    img.sampul {
+      width: 60px;
+      height: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Website Pencatatan Buku</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('pengertian')">Pengertian</a>
+    <a href="#" onclick="showPage('penyebab')">Penyebab</a>
+    <a href="#" onclick="showPage('solusi')">Solusi</a>
+    <a href="#" onclick="showPage('contoh')">Contoh Pencatatan</a>
+    <a href="#" onclick="showPage('kesimpulan')">Kesimpulan</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Selamat Datang</h2>
+    <p>Website ini membahas <b>sulitnya pencatatan buku secara manual</b> beserta pengertian, penyebab, solusi, contoh pencatatan, dan kesimpulan.</p>
+  </section>
+
+  <section id="pengertian">
+    <h2>Pengertian</h2>
+    <p>Pencatatan buku manual adalah proses mencatat data buku secara tulis tangan di buku catatan atau menggunakan tabel non-digital. 
+    Metode ini sederhana, namun sering tidak efisien ketika jumlah data banyak.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Ilustrasi Pengertian" class="illustrasi">
+  </section>
+
+  <section id="penyebab">
+    <h2>Penyebab</h2>
+    <ul>
+      <li>Catatan mudah rusak atau hilang karena berbasis kertas.</li>
+      <li>Pencarian data lambat karena harus membuka halaman catatan satu per satu.</li>
+      <li>Rawan kesalahan tulis dan sulit diperbarui.</li>
+      <li>Tidak ada backup jika catatan hilang.</li>
+    </ul>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Ilustrasi Penyebab" class="illustrasi">
+  </section>
+
+  <section id="solusi">
+    <h2>Solusi</h2>
+    <ul>
+      <li>Membuat sistem pencatatan berbasis website atau aplikasi digital.</li>
+      <li>Menyimpan data dalam database agar aman dan mudah dicari.</li>
+      <li>Menyediakan fitur pencarian cepat berdasarkan judul atau penulis.</li>
+      <li>Membuat backup otomatis agar data tetap aman.</li>
+    </ul>
+
+    <h3>Solusi dengan Berpikir Komputasional</h3>
+    <p>Berpikir komputasional adalah cara berpikir untuk menyelesaikan masalah secara sistematis. Dalam pencatatan buku, hal ini bisa diterapkan:</p>
+    <ul>
+      <li><b>Decomposition:</b> Memecah masalah pencatatan buku menjadi input data, penyimpanan, pencarian, dan laporan.</li>
+      <li><b>Pattern Recognition:</b> Menyadari bahwa semua data buku punya pola sama: judul, penulis, tahun, kategori, sampul.</li>
+      <li><b>Abstraction:</b> Mengambil data penting saja (judul, penulis, tahun, kategori), abaikan detail tak relevan.</li>
+      <li><b>Algorithm Design:</b> Buat langkah: isi form → simpan → tampilkan tabel.</li>
+    </ul>
+  </section>
+
+  <section id="contoh">
+    <h2>Contoh Pencatatan Buku</h2>
+    <p>Berikut contoh sederhana pencatatan buku dalam bentuk tabel:</p>
+    
+    <table id="tabelBuku">
+      <tr>
+        <th>No</th>
+        <th>Sampul</th>
+        <th>Judul Buku</th>
+        <th>Penulis</th>
+        <th>Tahun</th>
+        <th>Kategori</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/id/5/5e/Laskar_pelangi_sampul.jpg" class="sampul"></td>
+        <td>Laskar Pelangi</td>
+        <td>Andrea Hirata</td>
+        <td>2005</td>
+        <td>Novel</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/id/f/f1/Bumi_-_Tere_Liye.jpg" class="sampul"></td>
+        <td>Bumi</td>
+        <td>Tere Liye</td>
+        <td>2014</td>
+        <td>Fiksi</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" class="sampul"></td>
+        <td>Matematika Dasar</td>
+        <td>Drs. Sutanto</td>
+        <td>2018</td>
+        <td>Pelajaran</td>
+      </tr>
+    </table>
+
+    <form id="formBuku">
+      <h3>Tambah Buku Baru</h3>
+      <label>Judul Buku:</label>
+      <input type="text" id="judul" required>
+      
+      <label>Penulis:</label>
+      <input type="text" id="penulis" required>
+      
+      <label>Tahun:</label>
+      <input type="number" id="tahun" required>
+      
+      <label>Kategori:</label>
+      <select id="kategori" required>
+        <option value="">-- Pilih Kategori --</option>
+        <option>Novel</option>
+        <option>Fiksi</option>
+        <option>Pelajaran</option>
+        <option>Biografi</option>
+        <option>Lainnya</option>
+      </select>
+
+      <label>URL Sampul Buku:</label>
+      <input type="url" id="sampul" placeholder="https://link-gambar.jpg" required>
+      
+      <button type="submit">Tambah Buku</button>
+    </form>
+  </section>
+
+  <section id="kesimpulan">
+    <h2>Kesimpulan</h2>
+    <p>Pencatatan buku secara manual memiliki banyak kelemahan, seperti rawan hilang, sulit dicari, dan lambat. 
+    Dengan penerapan <b>berpikir komputasional</b> dan teknologi digital berupa website pencatatan buku, 
+    proses ini menjadi lebih terstruktur, cepat, aman, dan efisien. 
+    Solusi ini tidak hanya mengurangi risiko kehilangan data, tetapi juga mempermudah pengelolaan buku secara modern.</p>
+  </section>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(pageId).classList.add('active');
+    }
+
+    let noUrut = 3; // karena sudah ada 3 data awal
+    document.getElementById("formBuku").addEventListener("submit", function(e) {
+      e.preventDefault();
+      noUrut++;
+
+      let judul = document.getElementById("judul").value;
+      let penulis = document.getElementById("penulis").value;
+      let tahun = document.getElementById("tahun").value;
+      let kategori = document.getElementById("kategori").value;
+      let sampul = document.getElementById("sampul").value;
+
+      let tabel = document.getElementById("tabelBuku");
+      let row = tabel.insertRow();
+      row.insertCell(0).innerText = noUrut;
+      let imgCell = row.insertCell(1);
+      let img = document.createElement("img");
+      img.src = sampul;
+      img.className = "sampul";
+      imgCell.appendChild(img);
+      row.insertCell(2).innerText = judul;
+      row.insertCell(3).innerText = penulis;
+      row.insertCell(4).innerText = tahun;
+      row.insertCell(5).innerText = kategori;
+
+      // reset form
+      document.getElementById("formBuku").reset();
+    });
+  </script>
+</body>
+</html>
